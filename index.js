@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.static('blog'))
 app.use(fileUpload());
 
-const port = 4000;
+
 
 
 client.connect(err => {
@@ -105,4 +105,4 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.listen(port)
+app.listen( Process.env.PORT || 4000)
